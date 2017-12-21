@@ -7,3 +7,5 @@ A l'aide du téléphone on enverra l'information au robot avec une antenne bluet
 idee de pince robotique qui ramasserait les objets:  
 https://www.robotgeek.com/robotgeek-snapper-robotic-arm
 
+exemple de robot:
+https://www.hackster.io/twob/bluetooth-controlled-pick-and-place-robot-7f7814
