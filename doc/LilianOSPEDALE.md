@@ -8,3 +8,4 @@
 -on a utilisé un module de tank qui a servie les années précédentes. On l'a fait marcher à l'aide d'une alimentation
 -on a cherché les codes Arduino nécessaire et on a trouvé un tutoriel qui pourrait nous être utile https://www.youtube.com/watch?v=RTFSzXnlx4E
 -réflexion sur le montage de notre Clean-Robot. M.Masson va nous prêter un motor shield.
+site fonctionnement L298N:
