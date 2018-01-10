@@ -9,3 +9,15 @@ https://www.robotgeek.com/robotgeek-snapper-robotic-arm
 
 exemple de robot:
 https://www.hackster.io/twob/bluetooth-controlled-pick-and-place-robot-7f7814
+
+# Séance du 10 janvier 2018:
+
+recherche de code de base pour commencer le projet:
+https://openclassrooms.com/courses/s-initier-a-la-robotique/fabriquez-votre-propre-robot-arduino
+
+robot semblable a notre idée de départ:
+https://www.youtube.com/watch?v=RTFSzXnlx4E
+
+
+
+
