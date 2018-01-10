@@ -4,6 +4,6 @@
 -j'ai trouvé un site expliquant comment fabriquer un robot http://robotique-projet.lebonforum.com/t384-comment-faire-votre-premier-robot-en-utilisant-une-arduino  
 
 # Scéance du 10 janvier 2018:  
--je cherche des pièces qui pourrait nous servir pour le projet https://fr.aliexpress.com/item/Arduino-Robot-6-DOF-Aluminium-Pince-Griffe-Mount-Kit-M-canique-Bras-Robotique-et-Servos-et/32837658238.html?src=google&albslr=221095103&isdl=y&aff_short_key=UneMJZVf&source=%7Bifdyn%3Adyn%7D%7Bifpla%3Apla%7D%7Bifdbm%3ADBM&albch=DID%7D&acnt=494-037-6276&albcp=653151748&albag=36672819047&slnk=&trgt=61865531738&plac=&crea=fr32837658238&netw=g&device=c&mtctp=&gclid=EAIaIQobChMIoIrkjoTN2AIVg7DtCh3m1QIOEAQYBCABEgKkzfD_BwE   
-https://fr.aliexpress.com/item/Free-shipping-4WD-Smart-Robot-Car-Chassis-Kits-for-arduino-with-Speed-Encoder-New/32635045479.html?src=google&albslr=206174137&isdl=y&aff_short_key=UneMJZVf&source=%7Bifdyn:dyn%7D%7Bifpla:pla%7D%7Bifdbm:DBM&albch=DID%7D&src=google&albch=shopping&acnt=494-037-6276&isdl=y&albcp=653151748&albag=36672819047&slnk=&trgt=61865531738&plac=&crea=fr32635045479&netw=g&device=c&mtctp=&gclid=EAIaIQobChMIoIrkjoTN2AIVg7DtCh3m1QIOEAQYFiABEgKjtfD_BwE
-
+-je cherche des pièces qui pourrait nous servir pour le projet https://www.ebay.fr/itm/6-DOF-Aluminium-Arm-Clamp-Claw-Machinery-Mechanical-Robot-Arduino-Control-Kit/272373300812?hash=item3f6ab6be4c:g:wY4AAOSwxg5X1l-~ 
+-on a utilisé un module de tank qui a servie les années précédentes. On l'a fait marcher à l'aide d'une alimentation
+-on a cherché les codes Arduino nécessaire et on a trouvé un tutoriel qui pourrait nous être utile https://www.youtube.com/watch?v=RTFSzXnlx4E
