@@ -1,4 +1,4 @@
-# Code pour les 2 moteurs CC avec la carte L298N:  
+#Code pour les 2 moteurs CC avec la carte L298N:  
 //-- MOTEUR A --
 int ENA=5; //Connecté à Arduino pin 5(sortie pwm)
 int IN1=2; //Connecté à Arduino pin 2
@@ -33,6 +33,6 @@ void loop() {
   // Moteur A - Plein régime
   analogWrite(ENA,255);
 
-  // Moteur B - Mi-régime
-  analogWrite(ENB,128);
+  // Moteur B - Plein régime
+  analogWrite(ENB,255);
 }
