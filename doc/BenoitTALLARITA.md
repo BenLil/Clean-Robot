@@ -18,7 +18,13 @@ https://openclassrooms.com/courses/s-initier-a-la-robotique/fabriquez-votre-prop
 robot semblable a notre idée de départ:
 https://www.youtube.com/watch?v=RTFSzXnlx4E
 
-on a commencé à essayer de faire avancer notre tank en codant les deux cerveaux moteurs pour qu'on puisse déplacer notre robot pour aller chercher les objets que l'on souhaite ramasser.
+on a commencé à essayer de faire avancer notre module tank en codant les deux cerveaux moteurs pour qu'on puisse déplacer notre robot pour aller chercher les objets que l'on souhaite ramasser.
 
 
+# Séance du 19 janvier 2018:
+
+Aujourd'hui, on a réussi a trouver un code qui nous permet de faire tourner les deux moteurs cc du module de tank afin de le faire avancer.
+adressse du site: https://wiki.mchobby.be/index.php?title=Pont-H_L298N
+
+Puis, on a chercher des infos sur la façon de commander notre module de tank à l'aide d'un smartphone. Ceci grâce à un module bluetooth.
 
