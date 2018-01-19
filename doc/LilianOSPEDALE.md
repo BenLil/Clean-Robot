@@ -11,3 +11,7 @@
 site fonctionnement L298N:
 http://arduino.blaisepascal.fr/index.php/2017/05/11/pont-en-h-l298n/  
 -montage du L298N avec code arduino  
+
+# Scéance du 19 janvier 2018:  
+-on a enfin réussi à faire marcher le module de tank à l'aide du code qui se trouve sur cette page https://wiki.mchobby.be/index.php?title=Pont-H_L298N   
+-on a commencé à mettre en place le bluetooth (recherche de code et montage)
