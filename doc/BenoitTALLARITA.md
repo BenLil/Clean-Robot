@@ -18,6 +18,7 @@ https://openclassrooms.com/courses/s-initier-a-la-robotique/fabriquez-votre-prop
 robot semblable a notre idée de départ:
 https://www.youtube.com/watch?v=RTFSzXnlx4E
 
+on a commencé à essayer de faire avancer notre tank en codant les deux cerveaux moteurs pour qu'on puisse déplacer notre robot pour aller chercher les objets que l'on souhaite ramasser.
 
 
 
