@@ -23,7 +23,7 @@ on a commencé à essayer de faire avancer notre module tank en codant les deux 
 
 # Séance du 19 janvier 2018:
 
-Aujourd'hui, on a réussi a trouver un code qui nous permet de faire tourner les deux moteurs cc du module de tank afin de le faire avancer.
+Aujourd'hui, on a réussi a trouver un code qui nous permet de faire tourner les deux moteurs cc du module de tank afin de le faire avancer.  
 adressse du site: https://wiki.mchobby.be/index.php?title=Pont-H_L298N
 
 Puis, on a chercher des infos sur la façon de commander notre module de tank à l'aide d'un smartphone. Ceci grâce à un module bluetooth.
