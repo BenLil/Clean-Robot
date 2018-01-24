@@ -23,8 +23,15 @@ on a commencé à essayer de faire avancer notre module tank en codant les deux 
 
 # Séance du 19 janvier 2018:
 
-Aujourd'hui, on a réussi a trouver un code qui nous permet de faire tourner les deux moteurs cc du module de tank afin de le faire avancer.  
+Aujourd'hui,j'ai trouvé un code qui nous permet de faire tourner les deux moteurs cc du module de tank afin de le faire avancer.  
 adressse du site: https://wiki.mchobby.be/index.php?title=Pont-H_L298N
 
 Puis, on a chercher des infos sur la façon de commander notre module de tank à l'aide d'un smartphone. Ceci grâce à un module bluetooth.
+
+# Séance du 24 janvier 2018:
+
+Pendant cette séance, nous avons fait notre première présentation orale du projet.  
+Puis, j'ai branché le module bluetooth sur la carte arduino qui était déjà branché au préalable au module de tank.  
+j'ai réunis les deux codes arduino: le premier qui contrôle le module de tank et le deuxième qui permet de faire fonctionner le bluetooth.  
+je commence à écrire le code qui permet de contrôler le module de tank avec le smartphine android.  
 
