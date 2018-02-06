@@ -35,3 +35,6 @@ Puis, j'ai branché le module bluetooth sur la carte arduino qui était déjà b
 j'ai réunis les deux codes arduino: le premier qui contrôle le module de tank et le deuxième qui permet de faire fonctionner le bluetooth.  
 je commence à écrire le code qui permet de contrôler le module de tank avec le smartphine android.  
 
+# Scéance du 6 février 2018:  
+J'ai commencé à monter le bras robotique 
+
