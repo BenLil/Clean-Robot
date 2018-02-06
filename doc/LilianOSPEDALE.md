@@ -15,3 +15,11 @@ http://arduino.blaisepascal.fr/index.php/2017/05/11/pont-en-h-l298n/
 # Scéance du 19 janvier 2018:  
 -on a enfin réussi à faire marcher le module de tank à l'aide du code qui se trouve sur cette page https://wiki.mchobby.be/index.php?title=Pont-H_L298N   
 -on a commencé à mettre en place le bluetooth (recherche de code et montage)
+
+# Scéance du 24 janvier 2018:  
+-présentation du projet aux professeurs et au groupe  
+-montage du bluetooth avec l'arduino  
+-utilisation sur plateforme android: le module de tank avance, tourne à droite et tourne à gauche  
+
+# Scéance du 6 février 2018:  
+-recharge de la batterie qui va nous servir pour que le module de tank se déplace n'importe où  
