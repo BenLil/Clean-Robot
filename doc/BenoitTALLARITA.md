@@ -36,5 +36,8 @@ j'ai réunis les deux codes arduino: le premier qui contrôle le module de tank 
 je commence à écrire le code qui permet de contrôler le module de tank avec le smartphine android.  
 
 # Scéance du 6 février 2018:  
-J'ai commencé à monter le bras robotique 
+J'ai commencé à monter le bras robotique. Ce qui va prendre du temps car nous avons reçu les pièces sans notices pour les monter.
+
+# Séance du 19 février 2018:
+j'ai monté la première partie du bras robotique, qui contient déjà un servomoteur. j'ai réussi à coder celui-ci pour qu'il tourne sur 360 degrés. je réfléchis à la façon d'utiliser le téléphone pour controler les trois servomoteurs, que doit contenir le bras robotique, et le module de tank simultanément.  
 
