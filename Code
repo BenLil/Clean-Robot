@@ -71,3 +71,100 @@ void loop()
     delay(15);                       // waits 15ms for the servo to reach the position 
   } 
 }
+
+# code plus avancé  pour contôler  le module de tank 
+
+// code pour le module de tank 
+//-- MOTEUR A --
+int ENA=5; //Connecté à Arduino pin 5(sortie pwm)
+int IN1=2; //Connecté à Arduino pin 2
+int IN2=3; //Connecté à Arduino pin 3
+
+//-- MOTEUR B --
+int ENB=6; //Connecté à Arduino pin 6(Sortie pwm)
+int IN3=4; //Connecté à Arduino pin 4
+int IN4=7; //Connecté à Arduino pin 7
+
+#include <SoftwareSerial.h> //Software Serial Port
+#define RxD 10 //Pin 10 pour RX, PB2 sur votre board, a brancher sur le TX du HC-06
+#define TxD 11 //Pin 11 pour TX, PB3 sur votre board, a brancher sur le RX du HC-06
+SoftwareSerial BTSerie(11,10); 
+
+
+
+void setup() {
+ pinMode(ENA,OUTPUT);//Configurer les broches comme sortie
+ pinMode(ENB,OUTPUT);
+ pinMode(IN1,OUTPUT);
+ pinMode(IN2,OUTPUT);
+ pinMode(IN3,OUTPUT);
+ pinMode(IN4,OUTPUT);
+ digitalWrite(ENA,LOW);// Moteur A - Ne pas tourner (désactivation moteur)
+ digitalWrite(ENB,LOW);// Moteur B - Ne pas tourner (désactivation moteur)
+
+ // Direction du Moteur A
+ digitalWrite(IN1,LOW); 
+ digitalWrite(IN2,HIGH);
+
+ // Direction du Moteur B
+ // NB: en sens inverse du moteur A
+ digitalWrite(IN3,HIGH);
+ digitalWrite(IN4,LOW);
+
+
+//bluetooth
+
+Serial.begin(9600);
+// Configuration du bluetooth
+pinMode(RxD, INPUT);
+pinMode(TxD, OUTPUT);
+BTSerie.begin(9600); 
+ Serial.println("En attente de la commandes AT"); 
+    delay(100);
+  // Test des commandes AT  
+  BTSerie.print("AT+VERSION");  //Demande le NÂ° de version 
+  delay(1000);  
+}
+
+void loop() {
+// bluetooth
+
+char recvChar;
+
+//On lit caractere par caractere sur le terminal et on affiche sur le BT Serie
+if (Serial.available()) {
+recvChar = Serial.read(); //lecture
+BTSerie.write(recvChar); //ecriture
+} 
+
+//diretcion des moteurs 
+
+//aller tout droit 
+if(recvChar == "1") {
+
+  // Moteur A - Plein régime
+  analogWrite(ENA,255);
+  // Moteur B - Plein régime
+  analogWrite(ENB,255);
+}
+//tourner à gauche 
+if(recvChar == "4") {
+    // Moteur A - Plein régime
+  analogWrite(ENA,0);
+  // Moteur B - Plein régime
+  analogWrite(ENB,255);
+
+  }
+// tourner à droite 
+
+
+if(recvChar == "2") {
+    // Moteur A - Plein régime
+  analogWrite(ENA,255);
+  // Moteur B - Plein régime
+  analogWrite(ENB,0);
+
+  }
+
+}
+
