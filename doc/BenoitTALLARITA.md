@@ -41,3 +41,6 @@ J'ai commencé à monter le bras robotique. Ce qui va prendre du temps car nous 
 # Séance du 19 février 2018:
 j'ai monté la première partie du bras robotique, qui contient déjà un servomoteur. j'ai réussi à coder celui-ci pour qu'il tourne sur 360 degrés. je réfléchis à la façon d'utiliser le téléphone pour controler les trois servomoteurs, que doit contenir le bras robotique, et le module de tank simultanément.  
 
+# Séance du 12 mars 2018:
+
+j'ai alimenté le module de tank avec une batterie et la carte arduino avec une pile afin que celui-ci puisse se déplacer librement sans être relié à un ordinateur ou à un générateur.  Puis j'ai connecté le smartphone android au module de tank via le bluetooth afin de le contrôler à distance.
