@@ -43,4 +43,15 @@ j'ai monté la première partie du bras robotique, qui contient déjà un servom
 
 # Séance du 12 mars 2018:
 
-j'ai alimenté le module de tank avec une batterie et la carte arduino avec une pile afin que celui-ci puisse se déplacer librement sans être relié à un ordinateur ou à un générateur.  Puis j'ai connecté le smartphone android au module de tank via le bluetooth afin de le contrôler à distance.
+j'ai alimenté le module de tank avec une batterie et la carte arduino avec une pile afin que celui-ci puisse se déplacer librement sans être relié à un ordinateur ou à un générateur.  Puis j'ai connecté le smartphone android au module de tank via le bluetooth afin de le contrôler à distance.  
+
+# Séance du 26 mars 2018:
+
+j'ai continué la construction du bras robotique, j'ai monté le deuxieme servomoteur dessus (ce qui a pris plus de temps que prévu car les vis n'etaient pas les bonnes pour monter le servomoteur dessus j'ai du agtrandir les trous) .
+j'ai commencé le code du deuxiéme servomoteur.  
+
+# Séance du 5 avril 2018:
+
+j'ai monté le bras robotique sur le module de tank.
+j'ai effectué ma présentation de mi-projet afin de montrer mes avancements, les difficultées rencontrées et le respect ou non du planning.
+
