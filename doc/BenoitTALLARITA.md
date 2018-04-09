@@ -52,6 +52,11 @@ j'ai commencé le code du deuxiéme servomoteur.
 
 # Séance du 5 avril 2018:
 
-j'ai monté le bras robotique sur le module de tank.
-j'ai effectué ma présentation de mi-projet afin de montrer mes avancements, les difficultées rencontrées et le respect ou non du planning.
+j'ai commencé à monter le bras robotique sur le module de tank.
+j'ai effectué ma présentation de mi-projet afin de montrer mes avancements, les difficultées rencontrées et le respect ou non du planning.  
+
+# Séance du 9 avril 2018:
+
+J'ai finis de monter le bras robotique sur le module de tank.
+et j'ai commencé le code pour les deux autres servomoteurs.
 
