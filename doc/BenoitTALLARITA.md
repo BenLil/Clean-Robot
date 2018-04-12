@@ -57,6 +57,6 @@ j'ai effectué ma présentation de mi-projet afin de montrer mes avancements, le
 
 # Séance du 9 avril 2018:
 
-J'ai finis de monter le bras robotique sur le module de tank.
-et j'ai commencé le code pour les deux autres servomoteurs.
+J'ai finis de monter le bras robotique sur le module de tank ; 
+et j'ai commencé le code pour les deux autres servomoteurs qui permettent de commander: le bras robotique verticalement et d'ouvrir la pince.
 
