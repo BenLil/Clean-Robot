@@ -16,5 +16,5 @@ Matériel utilisé:
 -une carte arduino  
 -une carte L298N
 -un bras robotique avec une pince au bout  
--une caisse pour stocker les dechets  
+
 
