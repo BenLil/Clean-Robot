@@ -47,16 +47,25 @@ j'ai alimenté le module de tank avec une batterie et la carte arduino avec une 
 
 # Séance du 26 mars 2018:
 
-j'ai continué la construction du bras robotique, j'ai monté le deuxieme servomoteur dessus (ce qui a pris plus de temps que prévu car les vis n'etaient pas les bonnes pour monter le servomoteur dessus j'ai du agtrandir les trous) .
+j'ai continué la construction du bras robotique, j'ai monté le deuxieme servomoteur dessus (ce qui a pris plus de temps que prévu car les vis n'etaient pas les bonnes pour monter le servomoteur dessus j'ai du agrandir les trous) .
 j'ai commencé le code du deuxiéme servomoteur.  
 
 # Séance du 5 avril 2018:
 
 j'ai commencé à monter le bras robotique sur le module de tank.
-j'ai effectué ma présentation de mi-projet afin de montrer mes avancements, les difficultées rencontrées et le respect ou non du planning.  
+j'ai effectué ma présentation de mi-projet afin de montrer mes avancements, les difficultées rencontrées et le respect ou non du planning. 
+Et j'ai finis le code du module de tank.
 
 # Séance du 9 avril 2018:
 
 J'ai finis de monter le bras robotique sur le module de tank ; 
 et j'ai commencé le code pour les deux autres servomoteurs qui permettent de commander: le bras robotique verticalement et d'ouvrir la pince.
 
+# Séance du 2 mai 2018:  
+
+J'ai finis d'écrire séparement les codes des trois servomoteurs qui commandent la pince. je commence à intégrer ces codes au code qui dirige et contôle le module de tank.  
+
+# Séance du 7 mai 2018:
+
+Un des deux moteurs à courant continu ne fonctionnait plus, cela venait d'un disfonctinnnoment au niveau des rouages. Il a fallut le démonter pour remettre en place les rouages qui permettent de faire tourner la roue.
+Et commencement des tests sur le robot en situation réel, mais il présente de nombreux begues que je vais essayer de corriger avant la présentation finale, notamment au niveau de la pince. 
