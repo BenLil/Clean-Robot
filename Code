@@ -166,5 +166,277 @@ if(recvChar == "2") {
 
   }
 
+}  
+
+# Code final du robot: 
+
+// code pour le module de tank 
+//-- MOTEUR A --
+int ENA=5; //Connecté à Arduino pin 5(sortie pwm)
+int IN1=2; //Connecté à Arduino pin 2
+int IN2=3; //Connecté à Arduino pin 3
+
+//-- MOTEUR B --
+int ENB=6; //Connecté à Arduino pin 6(Sortie pwm)
+int IN3=4; //Connecté à Arduino pin 4
+int IN4=7; //Connecté à Arduino pin 7
+
+
+//**********************************************
+//Code de reference pour le module bluetooth HC-06  
+// envoi de commandes AT et affichage de la rÃ©ponse du module
+//
+//***********************************************/*  
+#include <SoftwareSerial.h>  //Software Serial Port  
+#define RxD 10    //Pin 10 pour RX, PB2 sur votre board, a brancher sur le TX du HC-06
+#define TxD 11    //Pin 11 pour TX, PB3 sur votre board, a brancher sur le RX du HC-06
+SoftwareSerial BTSerie(RxD,TxD);  
+
+
+#include <Servo.h>
+ 
+Servo myservo;  // création de l'objet myservo 
+Servo myservoo;  // création de l'objet myservo 
+Servo myservo3;  // création de l'objet myservo 
+ 
+// troisieme servomoteur
+int pos3 =40;             // variable permettant de conserver la position du serv
+int angle_initial3 =40;   //angle initial
+int angle_final3 =10;  //angle final
+int increment = 1;       //incrément entre chaque position
+
+
+
+// deuxieme servomoteur
+int pin_servo = 8;       // Pin sur lequel est branché le servo
+int pos = 165;             // variable permettant de conserver la position du servo
+int angle_initial =165;   //angle initial
+int angle_final = 5;   //angle final
+
+
+//premier servomoteur
+int pin_servo1 = 9;       // Pin sur lequel est branché le servo
+int pos1 = 0;             // variable permettant de conserver la position du servo
+int angle_initial1 = 0;   //angle initial
+int angle_final1 ="";   //angle final
+
+
+
+
+
+void setup() {
+ pinMode(ENA,OUTPUT);//Configurer les broches comme sortie
+ pinMode(ENB,OUTPUT);
+ pinMode(IN1,OUTPUT);
+ pinMode(IN2,OUTPUT);
+ pinMode(IN3,OUTPUT);
+ pinMode(IN4,OUTPUT);
+ digitalWrite(ENA,LOW);// Moteur A - Ne pas tourner (désactivation moteur)
+ digitalWrite(ENB,LOW);// Moteur B - Ne pas tourner (désactivation moteur)
+
+ // Direction du Moteur A
+ digitalWrite(IN1,LOW); 
+ digitalWrite(IN2,HIGH);
+
+ // Direction du Moteur B
+ // NB: en sens inverse du moteur A
+ digitalWrite(IN3,LOW);
+ digitalWrite(IN4,HIGH);
+
+//servomoteur 
+
+  myservo.attach(pin_servo);  // attache le servo au pin spécifié sur l'objet myservo
+  myservoo.attach(9);  // attaches the servo on pin 9 to the servo 
+myservo3.attach(12);  // attaches the servo on pin 9 to the servo object 
+
+
+//bluetooth
+ Serial.begin(9600);
+    // Configuration du bluetooth  
+  pinMode(RxD, INPUT);  
+  pinMode(TxD, OUTPUT);  
+  BTSerie.begin(9600); 
+    Serial.println("En attente de la commandes AT"); 
+    delay(100);
+  // Test des commandes AT  
+  BTSerie.print("AT+VERSION");  //Demande le NÂ° de version 
+  delay(1000);  
+
+
 }
+
+void loop() {
+
+
+// bluetooth
+
+char recvChar;  
+  //On lit caractere par caractere sur le BTSerie et on affiche sur le Terminal Serie  
+ if (BTSerie.available()) {  
+  recvChar = BTSerie.read(); //lecture  
+    Serial.print(recvChar);  //ecriture
+  }  
+  //On lit caractere par caractere sur le terminal et on affiche sur le BT Serie 
+if (Serial.available()) {  
+    recvChar = Serial.read(); //lecture
+    BTSerie.write(recvChar);  //ecriture
+  }  
+////diretcion des moteurs 
+////aller tout droit 
+if(recvChar =='1') {
+  
+ // Direction du Moteur A
+ digitalWrite(IN1,HIGH); 
+ digitalWrite(IN2,LOW);
+
+ // Direction du Moteur B
+ // NB: en sens inverse du moteur A
+ digitalWrite(IN3,HIGH);
+ digitalWrite(IN4,LOW);
+
+  // Moteur A - Plein régime
+  analogWrite(ENA,180);
+  // Moteur B - Plein régime
+  analogWrite(ENB,180);
+}
+
+//tourner à gauche 
+ if(recvChar == '4') {
+  
+ // Direction du Moteur A
+ digitalWrite(IN1,LOW); 
+ digitalWrite(IN2,HIGH);
+
+ // Direction du Moteur B
+ // NB: en sens inverse du moteur A
+ digitalWrite(IN3,HIGH);
+ digitalWrite(IN4,LOW);
+
+    // Moteur A - 
+  analogWrite(ENA,220);
+  // Moteur B - 
+  analogWrite(ENB,220);
+
+  }
+//  
+//// tourner à droite
+if(recvChar == '2') {
+  
+ // Direction du Moteur A
+ digitalWrite(IN1,HIGH); 
+ digitalWrite(IN2,LOW);
+
+ // Direction du Moteur B
+ // NB: en sens inverse du moteur A
+ digitalWrite(IN3,LOW);
+ digitalWrite(IN4,HIGH);
+
+    // Moteur A -
+  analogWrite(ENA,220);
+  // Moteur B -
+  analogWrite(ENB,220);
+  }
+//
+//////reculer 
+ if(recvChar == '3'){
+// Direction du Moteur A
+   digitalWrite(IN1,LOW); 
+   digitalWrite(IN2,HIGH);
+   
+ // Direction du Moteur B
+// NB: en sens inverse du moteur A
+   digitalWrite(IN3,LOW);
+   digitalWrite(IN4,HIGH);
+
+// Moteur A -
+    analogWrite(ENA,180);
+// Moteur B - 
+    analogWrite(ENB,180);
+  }
+ if(recvChar == '6'){
+  // Moteur A -
+    analogWrite(ENA,0);
+// Moteur B - 
+    analogWrite(ENB,0);
+ }
+
+
+//code pour les servomoteurs 
+
+ myservo.write(pos);
+
+ if(recvChar=='A'){
+
+    for (pos = angle_initial; pos >=angle_final; pos -= increment) { // Déplace le servo de 0 à 180 degréespar pas de 1 degrée 
+      myservo.write(pos);              // Demande au servo de se déplacer à cette position angulaire
+      delay(30);      // Attend 30ms entre chaque changement de position
+     }
+}
+if(recvChar=='a'){
+  pos=5;
+  myservo.write(pos);
+}
+
+if(recvChar=='U'){
+  for (pos = angle_final; pos <= angle_initial; pos += increment) { // Fait le chemin inverse
+    myservo.write(pos);              
+    delay(30);   
+  }}
+  
+ if(recvChar=='U'){
+   pos=165;
+  myservo.write(pos);
+ }
+
+  
+if(recvChar=='G'){
+  angle_final1 =100;
+  for (pos1 = angle_initial1 ; pos1 <= angle_final1; pos1+= increment) { // Déplace le servo de 0 à 180 degréespar pas de 1 degrée 
+    myservoo.write(pos1);              // Demande au servo de se déplacer à cette position angulaire
+    delay(30);                       // Attend 30ms entre chaque changement de position 
+  }
+}
+if(recvChar=='g'){
+  pos1=100;
+  myservoo.write(pos1);
+  }
+if((recvChar=='T')||(recvChar=='t')){
+  pos1=50;
+   myservoo.write(pos1);
+  
+}
+  
+if(recvChar=='D'){
+  pos1=50;
+  angle_initial1=50;
+  angle_final1 =15;
+  for (pos1 = angle_initial1 ; pos1 >= angle_final1; pos1-= increment) { // Déplace le servo de 0 à 180 degréespar pas de 1 degrée 
+    myservoo.write(pos1);              // Demande au servo de se déplacer à cette position angulaire
+    delay(30);                       // Attend 30ms entre chaque changement de position 
+  }
+}
+if(recvChar=='d'){
+  pos1=15;
+  myservoo.write(pos1);
+  }
+
+if(recvChar=='R'){
+ 
+  for (pos3 = angle_initial3 ; pos3 >= angle_final3; pos3-= increment) { // Déplace le servo de 0 à 180 degréespar pas de 1 degrée 
+    myservo3.write(pos3);              // Demande au servo de se déplacer à cette position angulaire
+    delay(30);                       // Attend 30ms entre chaque changement de position 
+  }
+}
+if(recvChar=='r'){
+  pos3=50;
+  myservo3.write(pos3);
+  }
+
+
+  
+
+}
+
+
+
 
